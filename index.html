@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <audio id="background-audio" autoplay loop>
-      <source src="audiofondo" type="audio/mpeg" />
+    <audio id="background-audio" loop>
+      <source src="audiofondo.mp3" type="audio/mpeg" />
       Tu navegador no soporta audio.
     </audio>
 
+    <button id="play-audio" style="position: fixed; top: 10px; left: 10px; z-index: 1000;">
+      🎶 Activar Música
+    </button>
+
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("play-audio").addEventListener("click", function () {
         const audio = document.getElementById("background-audio");
         audio.volume = 0.5; // Ajusta el volumen
-        audio.play().catch(error => console.log("Autoplay bloqueado: " + error));
+        audio.play().then(() => {
+          document.getElementById("play-audio").style.display = "none"; // Oculta el botón
+        }).catch(error => console.log("Error al reproducir audio:", error));
       });
     </script>
 
@@ -25,7 +31,7 @@
         <h1>
           Feliz día del amor y la amistad  
           Gracias por ser una gran amiga, ya sé que te insulto, te digo babosadas, te hago bullying y aunque a veces te harto, yo te quiero bro. Que tengas un bonito día, te salga todo bien y tengas suerte en todo.  
-          Atte: Tu amigo el enojón.
+          Atte: Tu amigo el viejito.
         </h1>
       </center>
       <div class="heart" id="heart1">
