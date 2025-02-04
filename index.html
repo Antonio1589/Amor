@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <audio id="background-audio" autoplay loop>
+      <source src="audiofondo" type="audio/mpeg" />
+      Tu navegador no soporta audio.
+    </audio>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const audio = document.getElementById("background-audio");
+        audio.volume = 0.5; // Ajusta el volumen
+        audio.play().catch(error => console.log("Autoplay bloqueado: " + error));
+      });
+    </script>
+
     <div id="card">
       <center>
         <h1>
-          Feliz dia del amor y la amistad
-          Gracias por ser una gran amiga,ya se que te insulto,te dijo babosadas,te hago bullying y aunque aveces te arto pero yo te quiero bro.Y que tengas un bonito dia y te salga todo bien y tengas suerte en todo.Atte: Tu amigo el enojon.       </h1>
+          Feliz día del amor y la amistad  
+          Gracias por ser una gran amiga, ya sé que te insulto, te digo babosadas, te hago bullying y aunque a veces te harto, yo te quiero bro. Que tengas un bonito día, te salga todo bien y tengas suerte en todo.  
+          Atte: Tu amigo el enojón.
+        </h1>
       </center>
       <div class="heart" id="heart1">
         <div id="half1">
@@ -24,8 +39,8 @@
         </div>
       </div>
       <div id="message">
-        <h2>¡Tu sonrisa ilumina!
-            </h2>
+        <h2>¡Tu sonrisa ilumina!  
+            Umpalumpa</h2>
       </div>
       <div class="heart" id="heart2">
         <div id="half1">
