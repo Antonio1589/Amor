@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarjetita</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="background-audio" loop>
+      <source src="audiofondo.mp3" type="audio/mpeg" />
+      Tu navegador no soporta audio.
+    </audio>
+
+    <button id="play-audio" style="position: fixed; top: 10px; left: 10px; z-index: 1000;">
+      🎶 Activar Música
+    </button>
+
+    <script>
+      document.getElementById("play-audio").addEventListener("click", function () {
+        const audio = document.getElementById("background-audio");
+        audio.volume = 0.5; // Ajusta el volumen
+        audio.play().then(() => {
+          document.getElementById("play-audio").style.display = "none"; // Oculta el botón
+        }).catch(error => console.log("Error al reproducir audio:", error));
+      });
+    </script>
+
+    <div id="card">
+      <center>
+        <h1>
+          Feliz día del amor y la amistad  
+          Gracias por ser una gran amiga, ya sé que te insulto, te digo babosadas, te hago bullying y aunque a veces te harto, yo te quiero bro. Que tengas un bonito día, te salga todo bien y tengas suerte en todo.  
+          Atte: Tu amigo el enojón.
+        </h1>
+      </center>
+      <div class="heart" id="heart1">
+        <div id="half1">
+          <div id="circle"></div>
+          <div id="rec"></div>
+        </div>
+        <div id="half2">
+          <div id="circle"></div>
+          <div id="rec"></div>
+        </div>
+      </div>
+      <div id="message">
+        <h2>¡Tu sonrisa ilumina!  
+            Umpalumpa</h2>
+      </div>
+      <div class="heart" id="heart2">
+        <div id="half1">
+          <div id="circle"></div>
+          <div id="rec"></div>
+        </div>
+        <div id="half2">
+          <div id="circle"></div>
+          <div id="rec"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
